@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<link rel="stylesheet" href="style/style.css" />
+<title>Florian Miralles</title>
+<link rel="icon" type="image/x-icon" href="image/icon.png" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+
+<body>
+
+<div class="header">
+  <h1>Florian Miralles</h1>
+  <p>Etudiant en <b>Math&eacutematiques </b> appliqu&eacutees</p>
+	<div>
+		<a href="mySite.html"><img src="image/en.png" alt="english" width="50" height="50"></a>
+	</div>
+</div>
+
+<div class="navbar">
+  <a href="index.html" class="active">Accueil</a>  	
+<!---  <a href="projetUniv.html">Projets Universitaire</a> -->
+  <a href="autres.html"> Autres créations </a>
+  <a href="document/CV3.0.pdf">Curriculum vitae</a> 
+  <!--<a href="devoir.html"> R&eacutesultats cours </a> commentaire-->
+  <a href="contact.php" class="right">Contact</a>
+	
+</a></summary></details> </p>
+</div>
+ 
+
+<div class="row">
+  <div class="side">
+    <h2>A propos de moi</h2>
+    
+    	<table>
+             <tr>
+               <td><b>Nom</b></td>
+               <td>Florian MIRALLES
+               </td> 
+             </tr>  
+             <tr>
+                <td><b>Role</b></td>
+                <td> Doctorant
+                </td>          
+             </tr>
+             <tr>
+               <td><b>Affiliation</b></td>
+               <td><a href="https://imag.edu.umontpellier.fr/" target="_blank"> IMAG </a>
+               </td>
+             </tr>
+           
+
+       </table>
+    
+	<img src="image/me_picture.jpg" alt="moi" style="width:80%">
+        <p style="font-style:italic;"><i>"C'est avec la logique que nous prouvons et avec l'intuition que nous trouvons"</i></p>
+	<p style="font-family:fantasy;">Henri Poincar&eacute.</p>
+	
+	<h3>Historique de parcours</h3>
+
+	<ul>
+      	<li>Octobre 2020, début du doctorat Dynamique des fluides numérique</li>
+      	<li>Obtention du M2 Modélisation et Analyse Numérique </li>
+        <li>Mars 2020, Stage CEA Cadarache</li>
+  		<li>Juin 2019, Obtention du M1.</li>
+  		<li>F&eacutevrier 2019, d&eacutebut du Stage à l'IMAG</li>
+  		<li>2017,Obtention de la licence.</li>
+	</ul>
+  </div>
+
+  <div class="main">
+<!--	<p> Depuis toujours passionn&eacute de sciences, j'ai compris t&ocirct qu'il &eacutetait n&eacutecessaire d'&ecirctre agile en math&eacutematiques
+	 pour pouvoir ensuite les appliquer. Bien que certain consid&egravere cette discipline comme &eacutetant le language universel des &eacutel&eacutements qui nous entourent et nous constituent
+	 , elle est &agrave mon sens bien plus puisqu'elle d&eacutecrit &eacutegalement des concepts qui sont inexistant dans l'univers tel que nous le connaissons, je parle par exemple 
+des espaces de dimension infinie. Comme vous l'aurez compris je me sp&eacutecialise rapidement dans l'analyse et le num&eacuterique pour pouvoir &eacutetudier tout ce qui se ram&egravene aux syst&egravemes dynamiques.
+ 
+</p> -->
+	
+    <h2 style="color:blue;">Sujet de Thèse </h2>
+	<h4>Simulation aérodynamique et aéroacoustique de machines tournantes avec des modèles de turbulence hybrides </h4>
+   	
+	  <a style="color:blue;"> Résumé </a>	
+	  <p> Ce travail est une contribution à la simulation numérique d'écoulements turbulents massivement décollés dans un but d'application industrielle. Après avoir introduit les modélisations de la turbulence et les ingrédients numériques utilisés dans nos applications, nous présentons des simulations d'écoulements de cylindre en régime supercritique et autour de profils d'aile de type NACA à plusieurs degrés d'incidence en utilisant différents modèles RANS, dont le modèle k-R récemment développé, ainsi que différentes approches hybrides. Ces dernières concernent le modèle DDES, et des combinaisons de type RANS/DVMS ou DDES/DVMS. Dans un deuxième temps, une stratégie de transition laminaire-turbulent est développée et introduite au sein d'un modèle RANS bas-Reynolds k-ε, puis de l'approche hybride RANS/DVMS. Les performances du modèle hybride utilisant la stratégie de transition sont évaluées sur des simulations d'écoulements autour d'un cylindre circulaire pour une large plage de régimes d'écoulement allant du sous-critique au supercritique. Dans une dernière partie, nous présentons des applications aéroacoustiques pour les différents problèmes d'aérodynamique qui ont été étudiés dans ce travail.
+          Pour réaliser les simulations numériques associées à cette étude, le logiciel de calcul parallèle d'écoulement fluide AIRONUM, développé en collaboration avec l'équipe ECUADOR de l'INRIA Sophia-Antipolis, a été utilisé. </p>
+          
+    
+          <details><summary> <a style="color:blue;"> Simulations d'écoulement aerodynamique </a> </summary>
+          
+          <h3 style="color:black;"> Supercritical flow around a circular cylinder </h3>
+    
+         <p> This benchmark concerns the simulation of the flow around a circular cylinder in the supercritical regime, more precisely at Reynolds numbers 1 million and 2 million (based on the cylinder diameter). For such flows, hybrid models are to be preferred, offering a good compromise between cost and prediction accuracy. Some views of the computational domain are given in the Figure below. For each Reynolds number, the non-dimensional distance of the first grid nodes is y+=1 in the case of an integration to the wall, and about y+=30 in the case of a wall law computation. Adiabatic conditions are considered and the initial flow conditions are ρ0 = 1,225 kg.m-3, Vx0 = 34,025 m.s-1, Vy0 = Vz0 = 0 m.s-1 and p0 = 101300 Pa (leading to a Mach number of 0,1).
+The inlet turbulence intensity is set to 0.5 % , and in the case of an hybrid approach using a k-ε model, k can be set to 0.05 m2.s-2 and ε to 0.18 m2.s-3 at time t=0 s. The quantities of interest are the bulk coefficients and the pressure distribution on the cylinder wall.
+         </p>
+         <center>
+	<ul>
+          <img src="Images_fluide/RANS_DVMS_Volumes_2.png" alt="Image DDES" width="270" height="150"><img src="Images_fluide/RANS_DVMS_Volumes_2M.png" alt="Image DDES" width="270" height="150"> 
+           <br />
+           <B> Figure</B>: Hybrid RANS/DVMS 3D vorticity field using velocity color scale and pressure distribution on the body, 1M on the left and 2M on the right side.
+        </ul>
+        </center>
+        
+        <center>
+	<ul>
+           <iframe width="560" height="315" src="image/animation_norma_HRANS.mp4" frameborder="0" allowfullscreen> </iframe>
+           <br />
+           <B> Figure</B>: Hybrid RANS/DVMS 3D vorticity field using velocity color scale and pressure distribution on the body at Reynolds number 1M.
+        </ul>
+        </center>
+         
+         
+         
+         
+         <h3 style="color:black;"> Flow around an extruded wing with profile NACA0021 </h3>
+         
+         <p> The numerical simulation of the flow around an extruded wing with profile NACA0021 is considered in the proposed benchmark, with an emphasis on the airfoil self-noise generation and propagation. The Reynolds number is set to 0.27 million (based on the chord of the airfoil section) and the angle of attack is 60°. Hybrid turbulence models are good candidates for the simulation of such flows, offering a good compromise between cost and prediction accuracy. Some views of the computational domain are given in the Figure below. The non-dimensional distance of the first grid nodes is y+=0,7. The initial flow conditions are ρ0 = 1,225 kg.m-3, Vx0 = V0cos(α) m.s-1, Vy0 = V0sin(α) m.s-1, Vz0 = 0 m.s-1 and p0 = 101300 Pa, where V0 = 34,025 m.s-1 and α denotes the angle of attack (α = 60°). The inlet turbulence intensity is set to 0.6 %.
+	The aerodynamic quantities of interest are the bulk coefficients and the pressure distribution on the wing surface, and the root-mean-square pressure fluctuations with regard to the acoustic aspects. 
+	</p>
+	<center>
+	<ul>
+          <img src="Images_fluide/DDES_DVMS_vorticity_naca0021.png" alt="Image NACA0021 DDES/DVMS" width="350" height="150"><img src="Images_fluide/URANS_DVMS_vorticity_naca0021.png" alt="Image NACA0021 DDES/DVMS" width="350" height="150"> 
+           <br />
+           <B> Figure</B>: Hybrid DDES/DVMS (left) and URANS/DVMS (right) 3D vorticity field using velocity color scale and pressure distribution on the body.
+        </ul>
+        </center>
+	
+         
+         <h3 style="color:black;"> Flow around an extruded wing with profile NACA0018 at different regime </h3>
+         
+         <p> The numerical simulation of the flow around an extruded wing with profile NACA0018 at diffrent angle of attack is considered in the proposed benchmark, with an emphasis on the airfoil self-noise generation and propagation. The Reynolds number is set to 0.160 million (based on the chord of the airfoil section) and the angles of attack are 0, 6 and 15 degrees. Hybrid turbulence models are good candidates for the simulation of such flows, offering a good compromise between cost and prediction accuracy. Some views of the computational domain are given in the Figure below. The non-dimensional distance of the first grid nodes is y+=0.1. The initial flow conditions are ρ0 = 1,225 kg.m-3, Vx0 = V0cos(α) m.s-1, Vy0 = V0sin(α) m.s-1, Vz0 = 0 m.s-1 and p0 = 101300 Pa, where V0 = 30 m.s-1 and α denotes the angle of attack (α = 0°, 6°, 15°). The inlet turbulence intensity is set to 1%.
+	The aerodynamic quantities of interest are the bulk coefficients and the pressure distribution on the wing surface, and the root-mean-square pressure fluctuations with regard to the acoustic aspects. We compute also the vortex shedding frequency. 
+	</p>
+	<center>
+	<ul>
+		<img src="Images_fluide/vorticity_naca0018_HDDES_k_R_0deg.png" alt="Image NACA0018 DDES/DVMS" width="150" height="150"><img src="Images_fluide/vorticity_naca0018_HDDES_k_R_6deg.png" alt="Image NACA0018 DDES/DVMS" width="150" height="150"><img src="Images_fluide/vorticity_naca0018_HDDES_k_R_15deg.png" alt="Image NACA0018 DDES/DVMS" width="150" height="150">
+           <br />
+           <B> Figure</B>: Hybrid DDES/DVMS (left) and URANS/DVMS (right) 3D vorticity field using velocity color scale and pressure distribution on the body.
+        </ul>
+        </center>
+
+
+         <h3 style="color:black;"> Flow around circular cylinder at different regime </h3>
+        
+         <p> This benchmark concerns the simulation of the flow around a circular cylinder at different regime, more precisely from subcritical to supercritical (based on the cylinder diameter). For such flows, hybrid models are to be preferred, offering a good compromise between cost and prediction accuracy. For each Reynolds number, the non-dimensional distance of the first grid nodes is y+=1 in the case of an integration to the wall, and about y+=30 in the case of a wall law computation. Adiabatic conditions are considered and the initial flow conditions are ρ0 = 1,225 kg.m-3, Vx0 = 34,025 m.s-1, Vy0 = Vz0 = 0 m.s-1 and p0 = 101300 Pa (leading to a Mach number of 0,1).
+The inlet turbulence intensity is set to 0.5 % , and in the case of an hybrid approach using a k-ε model, k can be set to 0.05 m2.s-2 and ε to 0.18 m2.s-3 at time t=0 s. The quantities of interest are the bulk coefficients and the pressure distribution on the cylinder wall.
+         </p>
+
+	<center>
+	<ul>
+		<img src="Images_fluide/vorticity_naca0018_HDDES_k_R_0deg.png" alt="Image NACA0018 DDES/DVMS" width="150" height="150"><img src="Images_fluide/vorticity_naca0018_HDDES_k_R_6deg.png" alt="Image NACA0018 DDES/DVMS" width="150" height="150"><img src="Images_fluide/vorticity_naca0018_HDDES_k_R_15deg.png" alt="Image NACA0018 DDES/DVMS" width="150" height="150">
+           <br />
+           <B> Figure</B>: Hybrid DDES/DVMS (left) and URANS/DVMS (right) 3D vorticity field using velocity color scale and pressure distribution on the body.
+        </ul>
+        </center> 
+         
+         
+         
+         </details>
+      
+      <h2 style="color:blue;"> Publications </h2>
+      
+          <h3 style="color:black;"> Rapport technique </h3>
+      
+           <p><details><summary> <a style="color:black;" href="https://hal.inria.fr/hal-03605874/document"> Florian Miralles, Bastien Sauvage, Stephen Wornom, Bruno Koobus, Alain Bernard Dervieux,      Hybrid RANS/DVMS modeling for static and rotating obstacles, 2022 </a> </summary>
+           
+           <p> We examine hybrid RANS-LES modeling for the study of flows around rotating
+               machines like helicopters and drones. Using a fine-mesh, the simulations should provide accurate
+		estimates concerning the noise emission. Each of these flows can involve mean and high Reynolds
+		turbulent regions with detached eddies and with thin laminar and turbulent boundary layers.
+		A hybrid model, like DDES, is then mandatory, with possibly an improved resolution of LES
+		regions, which are mainly turbulent wakes. It is then interesting to apply in these regions a
+		more sophisticated LES model than the LES part of DDES. In our study, we use the dynamic
+		variational multiscale model (DVMS). In the other regions, a DDES or simply a RANS modeling
+		is applied. In both cases a two-equation closure is chosen. After a discussion of the modeling
+		ingredients, we shall present a comparison of the RANS, LES, and hybrid models for two series
+		of flows. Although computed by many researchers, flows around cylinders remain difficult to
+		predict. The comparison will continue with a flow around a cross shaped mixing device rotating
+		inside a cylinder. 
+		</p>
+		
+	   </details></p>
+	   
+	   <p><details><summary> <a style="color:black;" href="https://imag.umontpellier.fr/~koobus/NORMA.d/Delivrables.d/IBM-biblio.pdf"> Florian Miralles, Bruno Koobus,  The immersed boundary approach. A review. 2021 </a> </summary>
+	   
+	   <p> A review on immersed boundary (IB) methods is proposed in this document. This starts
+		from Peskin’s pioneering work on the application of the IB approach for the computation of
+		the flow around heart valves to recent works dealing with the computation of compressible
+		turbulent flows using continuous or discrete forcing IB techniques. Emphasis is
+		placed on work dealing with IB methods applied to viscous compressible flows.
+	   </p>
+	   </details></p>
+    
+           <h3 style="color:black;"> Papiers de conférences </h3>
+           
+           <p><details><summary> <a style="color:black;" href="document/papier-cmff22.pdf"> F.Miralles, B.Sauvage, S.Wornom, B. Koobus, A. B. Dervieux, Application of hybrid RANS/VMS modeling to rotating machines, Conference on Modelling Fluid Flow, Budapest, Hungary, August 30-September 2, 2022 </a> </summary>
+           
+           <p> The proposed communication deals with hybrid RANS-LES modeling. The target application is the study of flows around rotating machines like
+		helicopters and drones. In fine, the simulations should provide accurate estimates concerning the noise emission. Each of these flows can involve mean
+		and high Reynolds turbulent regions with detached eddies and with thin laminar and turbulent boundarylayers. A hybrid model, like DDES, is then mandatory, with possibly an improved 			resolution of LES regions, which are mainly turbulent wakes. It is then interesting to apply there a more sophisticated LES model than the LES part of DDES. In our study, we
+		use there the Dynamic variational multiscale model (DVMS). In the other regions, a DDES or simply a RANS modeling is applied. In both cases a twoequation closure is chosen. After a 
+		discussion of the modeling ingredients, we shall present a comparison of the RANS, LES, and hybrid models for two series of flows. Although computed by many researchers, flows around 
+		cylinders remain difficult to predict. The comparison will continue with a flow around a cross shaped mixing device rotating inside a cylinder.
+		
+		   </p> 
+             
+           </details></p>
+             
+           <p><details><summary> <a style="color:black;" href="https://www.scipedia.com/public/Miralles_et_al_2022a">  F. Miralles, B. Sauvage, A. Duben, V. Bobkov, T.Kozubskaya, S.F. Wornom, B. Koobus, A. Dervieux, Simulation of massively separated flows ant rotating machine flows using hybrid models, ECCOMAS Congress 2022 5-9 June 2022, Oslo, Norway </a></summary>
+             
+           <p> Several hybrid turbulence modellings are evaluated on the simulation of the flows around
+               a circular cylinder, over an airfoil in a deep stall, and around a cross shaped mixing device
+               rotating inside a cylinder, the target application being the flows around rotating machines such as helicopters and drones. These benchmarks, which contain many characteristics encountered in industrial flows, are challenging due to the complex physics of the flow
+  				and the considered high Reynolds numbers. The first hybrid approach investigated in
+				this work is the classical Detached Eddy Simulation (DDES) model [1], the second one
+				blends a dynamic variational multiscale large eddy simulation (DVMS) model and a RANS
+				model (RANS/DVMS, [2]), and the third one combines the DDES model with the DVMS
+				model (DDES/DVMS, [3]). A smooth blending function, which is based on the value of
+				a blending parameter, is used for switching from RANS to DVMS in the RANS/DVMS
+				strategy. In the DDES/DVMS approach, the DVMS model is preferentially activated in
+				the wake in order to more accurately predict this region of the flow thanks to the low
+				dissipation introduced by this model. Results are compared to those of other RANS, LES
+				and hybrid simulations in the literature and with experimental data, and highlight the
+				overall good prediction capabilities of the proposed hybrid strategies for the simulation
+				of such massively separated flows and rotating machine flows.
+             </p>
+             </details></p>
+             
+             
+             <p><details><summary> <a style="color:black;" href="document/DLES13-FMiralles.pdf"> F. Miralles, B. Sauvage, S. Wornom, B. Koobus and A. Dervieux, Simulation of massively separated flows using hybrid turbulence models and mesh adaptation, Direct and Large-Eddy Simulation 13, Itlay, 2022. </a> </summary>
+             
+               <p> The simulation of unsteady flows characterized by large separations induced by adverse pressure gradient is still a chal-
+					lenge at high Reynolds numbers. For such simulations, hybrid models are those favored due to the cost/accuracy compro-
+					mise they offer. In this study, we assess, next to the DDES approach, the performance of two hybrid models for the pre-
+					diction of the flow around a circular cylinder at Reynolds numbers 10 6 and 2 × 10 6 , and the flow over a NACA0021 airfoil in a deep stall at Reynolds number 270000. These hybrid
+					models combine either a RANS model or the DDES approach with the dynamic variational multiscale (DVMS) model for
+					the large eddy simulation. A mesh adaptation procedure is currently being applied for the NACA0021 benchmark, with
+					the aim of improving the prediction of the aerodynamic and aeroacoustic characteristics of the flow, such as the airfoil self-
+                    noise generation and propagation.
+               </p>
+               
+               </details></p>
+	   
+	   
+	<h2 style="color:blue;"> Communications </h2>
+	
+	     <h3 style="color:black;"> Conférences </h3>
+	     
+	     <p> <details><summary> <a style="color:black;" href="https://congress.cimne.com/NSCM-33/Admin/Files/FileAbstract/a15.pdf"> F.Miralles, S.Wornom, B. Koobus, A. B. Dervieux, SIMULATION OF THE SUPERCRITICAL FLOW AROUND A CIRCULAR CYLINDER USING HYBRID MODELS, Jonkoping, Suède, octobre 2021 </a></summary></details> </p>
+    
+	     <p> <details><summary> <a style="color:black;" href="https://www.scipedia.com/public/Miralles_et_al_2022a"> F.Miralles, B.Sauvage, A. Duben, V. Bobkov, T.Kozubskaya, S.Wornom, B. Koobus, A. B. Dervieux, SIMULATION OF MASSIVELY SEPARATED FLOWS AND ROTATING MACHINE FLOWS USING HYBRID MODELS, Oslo, Norvège, octobre 2021 </a></summary></details> </p>
+
+         <p> <details><summary> <a style="color:black;" href="https://www.cmff.hu/pdf/CMFF22_Conference_Proceedings.pdf"> F.Miralles, B.Sauvage, S.Wornom, B. Koobus, A. B. Dervieux, Application of hybrid RANS/VMS modeling to rotating machines, Conference on Modelling Fluid Flow (CMFF’22), Hungary, 2022</a></summary></details> </p>
+    
+         <p> <details><summary> <a style="color:black;" href="document/DLES13-FMiralles.pdf"> F. Miralles, B.Sauvage, S.Wornom, B. Koobus, A. B. Dervieux, Massively separated flows using hybrid turbulence models and mesh adaptation, Direct and Large-Eddy Simulation 13, Itlay, 2022. </a></summary></details> </p>
+
+         <p> <details><summary> <a style="color:black;" href="https://imag.umontpellier.fr/?page_id=526&idseance=5199">  F.Miralles, Massively separated flows modelling using hybrid turbulent models, IMAG, France. </a></summary></details> </p>
+    
+    	 <p> <details><summary> <a style="color:black;" href="document/CFC_Abstract_Miralles.pdf">  F.Miralles, B.Sauvage, S.Wornom, B. Koobus, A. B. Dervieux, Assessment of turbulence hybrid models with transition modeling for the simulation of massively separated flows, France, 2023.</a></summary></details> </p> 
+           
+    <!-- Norma project meeting -->
+    
+	     <h3 style="color:black;"> <a href="https://imag.umontpellier.fr/~koobus/norma.html"> NORMA Project Meeting</a>  </h3>
+	     
+	     <p><li><a style="color:black;" href="document/presentation_2.pdf"> F.Miralles, IB method: a first simple implementation, 2021 </a></li></p>
+	     
+	     <p><li><a href="document/presentation_3.pdf"> F.Miralles, Hybrid turbulence models, cylinder at Reynolds 1M, 2021 </a></li></p>
+	     
+	     <p><li><a href="document/presentation_4.pdf"> F.Miralles, Transition models, Hybrid models, cylinder at Reynolds 1M, 2021 </a></li></p>
+	     
+	     <p><li><a href="document/presentation_7.pdf"> F.Miralles, Current state of k − R WL cylinder, k − ε − γ model and Imersed boundary method, 2022 </a></li></p>
+	     
+         <p><li><a href="document/presentation_dec_2022.pdf ">F.Miralles, New k-ε-γ transition model, aerodynamic and aeroacoustic simulation of the NACA0018, current status with MRF, 2023. </a></li></p>
+             
+	
+  </div> <!-- row-->
+</div> <!-- main-->
+
+<div class="footer">
+  <h3><a href="contact.php"> Contact </a></h3>
+
+</div>
+
+</body>
+</html>
+

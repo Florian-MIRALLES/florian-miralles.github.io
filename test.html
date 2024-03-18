@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<link rel="icon" type="image/png" href="icon.png">		
+<title>Test</title>
+
+<script type="text/javascript" src="test.js"> </script> <!-- a mettre dans le head -->
+<script language="JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.2.1/math.js"></script>
+
+
+<style type="text/css">
+
+		.header {
+  			padding: 40px;
+  			text-align: center;
+  			background: #1abc9c;
+  			color: white;
+			font-size:20px;
+		}
+
+		#contain {
+			
+			display:flex;
+		}
+
+		.sideLeft {
+  			-ms-flex: 50%; 
+  			flex: 50%;
+
+  			background-color: #f1f1f1;
+  			padding: 20px;
+			margin:20px;
+			text-align:center;
+		}
+
+
+		.sideRight {  
+ 
+  			-ms-flex: 50%;  
+  			flex: 50%;
+
+  			background-color: #f1f1f1;
+  			padding: 20px;
+			margin:20px;
+			text-align:center;
+		}
+		
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+ 			margin: 0px;
+		}
+
+		#julia_set_info {
+			margin:10px;
+			text-align: center;
+			font-size:25px;
+		}
+		
+		.footer {
+  			padding: 20px;
+  			text-align: center;
+ 			background: #ddd;
+		}
+
+</style>
+</head>
+
+<body>
+
+<div>
+      <h1> Progation de la chaleur </h1>
+      
+      <body >
+      <div>
+      <p> Définir la température du radiateur <input type="text" placeholder="Exemple 50" id="TempMax"> [°C] 
+      <p> Définir la Température de la fenetre  <input type="text" placeholder="Exemple 10" id="TempMin"> [°C]
+      <p> Définir conductivité thermique  <input type="text" placeholder="Exemple 0.024" id="Conductivity"> [W/(m.K)]
+      <p> Définir la resolution du calcul  <input type="text" placeholder="Exemple 0.33, 0.5, 1, 2" id="Reso"> [percent]
+      <p> Définir le domaine du calcul  <input type="text" placeholder="Exemple 2" id="Domaine"> [m] 
+      <p> Définir la condition CFL pour l'avancement en temps  <input type="text" placeholder="Exemple 0.1" id="CFL"> [percent]
+      <button type="button" onclick="getValue();"> Récupérer la valeur </button> </p>
+      
+      </div>
+        <p> Definir domaine <button type="button" onclick="domainDef();"> Definir les bords </button> </p> </p>
+      	<p> Afficher le champ de Temperature <button type="button" onclick="drawHeatFlux();"> Calculer </button> </p> </p>
+      	<canvas id="canvas" width="480" height="408"></canvas>  
+      </body>
+      
+      
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<link rel="stylesheet" href="style/style.css" />
+<link rel="icon" type="image/png" href="icon.png">	 <title> Ensembles de Julia</title> 
+
+<script type="text/javascript" src="Acoustic.js"> </script>
+<script type="text/javascript" src="heat_flux.js"> </script>
+<script type="text/javascript" src="julia_set.js"> </script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  	tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],preview: ["[math]"]},
+	TeX: { equationNumbers: {autoNumber: "AMS"} } });
+</script>
+	
+	</head>
+	<body>
+
+<div class="header">
+<h1> Autres cr&eacuteations </h1>
+</div>
+
+
+
+<!-- ---------------- Acoustic Ray -------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+<details> <summary><center > <h2> Rayonnement Acoustique </h2> </center></summary>
+<div id="body">
+    <center>
+      <div id="heat_set_style"></div>
+	
+      <div>
+      	<p> D&eacutefinir une fr&eacutequence de vibration  <input type="text" placeholder="Exemple 10" id="freq"> [MHz] </p>
+      	<p> D&eacutefinir la vitesse du son du milieu  <input type="text" placeholder="Exemple 1550" id="vitesse"> [m/s] </p>
+      	<p> D&eacutefinir le diametre de la lentille <input type="text" placeholder="Exemple 0.04" id="diam_lens"> [m] </p>
+      	<p> D&eacutefinir l'angle focale <input type="text" placeholder="Exemple 45" id="angle_in"> [degres]</p>
+      	<button type="button" onclick="drawAcousticRay();"> R&eacutecup&eacuterer les valeurs </button>
+      </div>
+      
+      <canvas id="canvas" width="502" height="408"></canvas>
+    </center>
+</div>
+</details>
+
+<!-- ---------------- Thermic propagation --------------------------------------------->
+<!------------------------------------------------------------------------------------->
+<details> <summary><center > <h2> Propagation de la chaleur </h2> </center></summary>
+<div id="body">
+    <center>
+      <div>
+      <p> D&eacutefinir la temp&eacuterature du radiateur <input type="text" placeholder="Exemple 50" id="TempMax"> [&deg C] 
+      <p> D&eacutefinir la temp&eacuterature de la fenetre  <input type="text" placeholder="Exemple 10" id="TempMin"> [&deg C]
+      <p> D&eacutefinir conductivit&eacute thermique  <input type="text" placeholder="Exemple 0.024" id="Conductivity"> [W/(m.K)]
+      <p> D&eacutefinir la r&eacutesolution du calcul  <input type="text" placeholder="Exemple 0.33, 0.5, 1, 2, 4" id="Reso"> recommand&eacute 1
+      <p> D&eacutefinir le domaine du calcul  <input type="text" placeholder="Exemple 2" id="Domaine"> [m] recommand&eacute 4
+      <p> D&eacutefinir la condition CFL pour l'avancement en temps  <input type="text" placeholder="Exemple 0.5" id="CFL"> recommand&eacute 0.5
+      <button type="button" onclick="getValue();"> R&eacutecup&eacuterer la valeur </button> </p>
+      
+      </div>
+        <p> D&eacutefinir domaine <button type="button" onclick="domainDef();"> D&eacutefinir les bords </button> </p> </p>
+      	<p> Afficher le champ de Temp&eacuterature <button type="button" onclick="drawHeatFlux();"> Calculer </button> </p> </p>
+      	<canvas id="canvasHeat" width="480" height="480"></canvas>  
+</div>
+</details>    
+
+<!-- ---------------- Julia Set -------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+<details> <summary> <center> <h2> Ensemble de Julia </h2> </center> </summary>
+<div id="contain"> 
+	<div class="sideLeft">
+		<div id="julia_set_style"></div>
+		<canvas id="canvasLeft" style="margin: 0 auto; display: block; background-color: #000;" width="480" height="480"></canvas>	
+	</div>
+
+	<div class="sideRight">
+	<h3>Cliquer &agrave l'int&eacuterieur du rep&egravere:</h3>
+		<canvas id="canvasRight" style="margin: 0 auto; display: block; cursor:pointer;background-color: #ffffff;" width="480" height="480"></canvas>
+	</div>
+		
+</div>
+<center> <B> Figure </B> La figure de droite nous montre les  $z_0$ tel que la suite $z^n+1 = z^n^3 + c$ reste bornée.</center>
+</details>
+
+<!------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------->
+
+	<div class="footer">
+  		<h2><a href="index.html"> Accueil </a></h2>
+	</div>
+
+	</body>
+</html>

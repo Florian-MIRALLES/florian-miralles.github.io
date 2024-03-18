@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<link rel="stylesheet" href="style/style.css" />
+<link rel="icon" type="image/png" href="icon.png">	 <title> Ensembles de Julia</title> 
+
+<script type="text/javascript" src="Acoustic.js"> </script>
+<script type="text/javascript" src="heat_flux.js"> </script>
+<script type="text/javascript" src="julia_set.js"> </script>
+	
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  	tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],preview: ["[math]"]},
+	TeX: { equationNumbers: {autoNumber: "AMS"} } });
+</script>
+	
+	</head>
+	<body>
+
+<div class="header">
+<h1> Others creations </h1>
+</div>
+
+
+
+<!-- ---------------- Acoustic Ray -------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+<details> <summary><center > <h2> Acoustic ray </h2> </center></summary>
+<div id="body">
+    <center>
+      <div id="heat_set_style"></div>
+	
+      <div>
+      	<p> Define the frequence   <input type="text" placeholder="Example 10" id="freq"> [MHz] </p>
+      	<p> Define speed of sound  <input type="text" placeholder="Example 1550" id="vitesse"> [m/s] </p>
+      	<p> Define the diameter of the lens <input type="text" placeholder="Example 0.04" id="diam_lens"> [m] </p>
+      	<p> Define angle <input type="text" placeholder="Example 45" id="angle_in"> [degres]</p>
+      	<button type="button" onclick="drawAcousticRay();"> Get values </button>
+      </div>
+      
+      <canvas id="canvas" width="502" height="408"></canvas>
+    </center>
+</div>
+</details>
+
+<!-- ---------------- Thermic propagation --------------------------------------------->
+<!------------------------------------------------------------------------------------->
+<details> <summary><center > <h2> Heat propagation </h2> </center></summary>
+<div id="body">
+    <center>
+      <div>
+      <p> Define temperature of radiators <input type="text" placeholder="Example 50" id="TempMax"> [°C] 
+      <p> Define window temperature  <input type="text" placeholder="Example 10" id="TempMin"> [°C]
+      <p> Define conductivity  <input type="text" placeholder="Exemple 0.024" id="Conductivity"> [W/(m.K)]
+      <p> Define computing resolution  <input type="text" placeholder="Exemple 0.33, 0.5, 1, 2, 4" id="Reso"> recommended 1
+      <p> Define computational domain  <input type="text" placeholder="Exemple 2" id="Domaine"> [m] recommended 4
+      <p> Define cfl condition for time advancing  <input type="text" placeholder="Exemple 0.5" id="CFL"> recommended 0.5
+      <button type="button" onclick="getValue();"> get values </button> </p>
+      
+      </div>
+        <p> Add radiators boundaries <button type="button" onclick="domainDef();"> Define boundaries </button> </p> </p>
+      	<p> Compute the heat field <button type="button" onclick="drawHeatFlux();"> Run </button> </p> </p>
+      	<canvas id="canvasHeat" width="480" height="480"></canvas>  
+</div>
+</details>    
+
+<!-- ---------------- Julia Set -------------------------------------------------------->
+<!-------------------------------------------------------------------------------------->
+
+<details> <summary> <center> <h2> Julia Set </h2> </center> </summary>
+<div id="contain"> 
+	<div class="sideLeft">
+		<div id="julia_set_style"></div>
+		<canvas id="canvasLeft" style="margin: 0 auto; display: block; background-color: #000;" width="480" height="480"></canvas>	
+	</div>
+
+	<div class="sideRight">
+	<h3>Choose a complex value in the plan:</h3>
+		<canvas id="canvasRight" style="margin: 0 auto; display: block; cursor:pointer;background-color: #ffffff;" width="480" height="480"></canvas>
+	</div>
+		
+</div>
+<center> <B> Figure </B> The right figure show us $z_0$ such that the sequence $z^n+1 = z^n^3 + c$ is bounded.</center>
+</details>
+
+<!------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------->
+
+	<div class="footer">
+  		<h2><a href="mySite.html"> Home </a></h2>
+	</div>
+
+	</body>
+</html>
